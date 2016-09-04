@@ -1,0 +1,4 @@
+# Global parameter defaults
+path: /usr/src/wordpress
+extra-php: |
+  define( 'WP_DEBUG', true );
