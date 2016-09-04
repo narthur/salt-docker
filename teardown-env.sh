@@ -1,6 +1,5 @@
 #!/bin/bash
 
-docker stop hf-mysql hf-test-mysql hf-wordpress
-docker rm hf-mysql hf-test-mysql hf-wordpress
+docker stop salt-mysql salt-wordpress
+docker rm salt-mysql salt-wordpress
 sudo rm -r ./data/
-sudo rm -r ./test-data/
