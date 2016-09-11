@@ -5,8 +5,8 @@ VOLUME [ "/usr/src/wordpress/wp-content/plugins/wp-salt-theme" ]
 COPY disable-canonical-redirects.php /usr/src/wordpress/wp-content/plugins/
 
 COPY wp-cli.yml .
-
 COPY wp-cli.phar .
+COPY images /root/images
 
 COPY wp-config.php .
 COPY wp-config.php /usr/src/wordpress

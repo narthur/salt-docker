@@ -9,6 +9,16 @@
 5. Start the environment: `./restart-env.sh`
 6. Load the site in a browser: [http://localhost:8080/](http://localhost:8080/)
 
+## Logins
+
+### WordPress
+
+localhost:8080/wp-admin
+
+admin
+
+saltpass
+
 ## More Info
 
 Prepare to start env:

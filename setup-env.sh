@@ -40,7 +40,16 @@ docker exec salt-wordpress /bin/bash -c 'wp option update default_comment_status
 docker exec salt-wordpress /bin/bash -c 'wp option update sidebars_widgets --format=json --allow-root < option-sidebar_widgets.txt'
 
 echo 'Create Content'
-# docker exec hf-wordpress /bin/bash -c "wp post create --allow-root --post_type=page --post_status=publish --post_title='Settings' --post_content='[hfSettings]'"
-# docker exec hf-wordpress /bin/bash -c "wp post create --allow-root --post_type=page --post_status=publish --post_title='Authenticate' --post_content='[hfAuthenticate]'"
-# docker exec hf-wordpress /bin/bash -c "wp post create --allow-root --post_type=page --post_status=publish --post_title='Goals' --post_content='[hfGoals]'"
-# docker exec hf-wordpress /bin/bash -c "wp post create --allow-root --post_type=page --post_status=publish --post_title='Partners' --post_content='[hfManagePartners]'"
+docker exec salt-wordpress /bin/bash -c "wp post create --post_title='Lay Training' --post_content='CONTENT' --allow-root --post_type=page --post_status=publish"
+docker exec salt-wordpress /bin/bash -c "wp post create --post_title='Orphans' --post_content='CONTENT' --allow-root --post_type=page --post_status=publish"
+docker exec salt-wordpress /bin/bash -c "wp post create --post_title='Children\'s Education' --post_content='CONTENT' --allow-root --post_type=page --post_status=publish"
+docker exec salt-wordpress /bin/bash -c "wp post create --post_title='Multimedia Production' --post_content='CONTENT' --allow-root --post_type=page --post_status=publish"
+docker exec salt-wordpress /bin/bash -c "wp post create --post_title='Butterfly Paradise' --post_content='CONTENT' --allow-root --post_type=page --post_status=publish"
+docker exec salt-wordpress /bin/bash -c "wp post create --post_title='Hooftrek' --post_content='CONTENT' --allow-root --post_type=page --post_status=publish"
+
+docker exec salt-wordpress /bin/bash -c "wp media import /root/images/thumb-1.jpeg --post_id=1 --featured_image --allow-root"
+docker exec salt-wordpress /bin/bash -c "wp media import /root/images/thumb-2.jpeg --post_id=2 --featured_image --allow-root"
+docker exec salt-wordpress /bin/bash -c "wp media import /root/images/thumb-3.jpeg --post_id=3 --featured_image --allow-root"
+docker exec salt-wordpress /bin/bash -c "wp media import /root/images/thumb-4.jpeg --post_id=4 --featured_image --allow-root"
+docker exec salt-wordpress /bin/bash -c "wp media import /root/images/thumb-5.jpeg --post_id=5 --featured_image --allow-root"
+docker exec salt-wordpress /bin/bash -c "wp media import /root/images/thumb-6.jpeg --post_id=6 --featured_image --allow-root"
